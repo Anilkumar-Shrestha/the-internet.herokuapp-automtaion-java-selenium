@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="E2E Test Suite" parallel="tests" thread-count="5">
+    <listeners>
+        <listener class-name="listeners.ExtentReportListener"/>
+<!--        <listener class-name="listeners.AllurePrepareListener"/>-->
+    </listeners>
+    <test name="AddRemoveElementsTest">
+        <classes>
+            <class name="features.addRemoveElements.AddRemoveElementsTest"/>
+        </classes>
+    </test>
+
+</suite>
