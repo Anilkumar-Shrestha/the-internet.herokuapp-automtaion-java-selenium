@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 import static framework.utility.loggerator.Logger.getLogger;
 import static org.openqa.selenium.support.ui.ExpectedConditions.not;
@@ -61,6 +62,16 @@ public class HtmlElement {
 			return parentHtmlElement.getWebElement().findElement(locator);
 		}
 		return UiDriver.getWebDriver().findElement(locator);
+	}
+
+	public List<WebElement> getWebElements() {
+		if (webElement != null) {
+			return List.of(webElement);
+		}
+		if (parentHtmlElement != null) {
+			return parentHtmlElement.getWebElement().findElements(locator);
+		}
+		return UiDriver.getWebDriver().findElements(locator);
 	}
 
 	public WebElement waitForElementVisibility(){
