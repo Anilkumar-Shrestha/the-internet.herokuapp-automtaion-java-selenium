@@ -10,5 +10,15 @@
             <class name="features.addRemoveElements.AddRemoveElementsTest"/>
         </classes>
     </test>
+    <test name="AddRemoveElementsTest">
+        <classes>
+            <class name="features.basicAuth.BasicAuthTest"/>
+        </classes>
+    </test>
+    <test name="AddRemoveElementsTest">
+        <classes>
+            <class name="features.basicAuth.BasicAuthTestOldMethod"/>
+        </classes>
+    </test>
 
 </suite>

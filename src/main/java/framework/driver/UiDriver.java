@@ -3,7 +3,9 @@ package framework.driver;
 import application.TestBase;
 import lombok.Getter;
 import lombok.Setter;
+import org.openqa.selenium.HasAuthentication;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.UsernameAndPassword;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -186,6 +188,14 @@ public class UiDriver extends TestBase {
 		LogEntries logEntries = getLogs();
 		return logEntries.getAll().stream()
 				.anyMatch(logEntry -> logEntry.getMessage().contains("An invalid email address was specified"));
+	}
+
+	public static void registerAuthenticationUsing(String userName, String password) {
+
+
+		HasAuthentication authentication = (HasAuthentication) UiDriver.getWebDriver();
+		// // You can either register something for all sites
+		authentication.register((() -> new UsernameAndPassword(userName, password)));
 	}
 
 

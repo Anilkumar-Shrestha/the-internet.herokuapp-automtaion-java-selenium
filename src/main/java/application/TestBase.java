@@ -2,11 +2,13 @@ package application;
 
 import framework.driver.UiDriver;
 import framework.driver.UiDriverActions;
+import framework.utility.Helper.SetCredentialsForSuite;
 import framework.utility.PropertiesManager;
 import framework.utility.SetUp;
 import io.qameta.allure.Step;
 import listeners.*;
 import org.apache.commons.io.FileUtils;
+import org.json.simple.parser.ParseException;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -26,7 +28,7 @@ public class TestBase{
 	public static String methodName;
 
 	@BeforeSuite(alwaysRun = true)
-	public void setUp(@Optional("chrome") String browser) throws IOException {
+	public void setUp(@Optional("chrome") String browser) throws IOException, ParseException {
 		getLogger().info("---------------- Test Suite setUp started -----------");
 		setUp = new SetUp();
 		setUp.setBrowserType(browser);
@@ -38,6 +40,8 @@ public class TestBase{
 		setUp.setRemoteUrl( PropertiesManager.getProperty("remoteUrl") );
 		getLogger().info(setUp.toString());
 
+//		setting Up credentials
+		SetCredentialsForSuite.setCredentialsFromLocalFile();
 
 		//        creating filed download directory if not present (used File.separator since when using "/" for windows it does not work in download.
 		FileDownloadPath = System.getProperty("user.dir")+ File.separator+"src"+File.separator+"test"+File.separator+"downloads"+File.separator+"common";

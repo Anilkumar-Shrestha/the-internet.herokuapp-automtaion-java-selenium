@@ -16,6 +16,12 @@ public class MainPageActions {
         MainPage.getExampleFromListByTextLocator("Add/Remove Elements").click();
     }
 
+    public static void clickOnBasicAuthLink(){
+        MainPage.getExampleFromListByTextLocator("Basic Auth").waitAndReturnStatusUntilPageContainsElement();
+        MainPage.getExampleFromListByTextLocator("Basic Auth").waitForElementVisibility();
+        MainPage.getExampleFromListByTextLocator("Basic Auth").click();
+    }
+
     public static void clickOnBrokenImagesLink(){
         MainPage.getExampleFromListByTextLocator("Broken Images").waitAndReturnStatusUntilPageContainsElement();
         MainPage.getExampleFromListByTextLocator("Broken Images").waitForElementVisibility();
