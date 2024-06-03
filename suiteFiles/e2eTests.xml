@@ -25,6 +25,11 @@
             <class name="features.brokenImages.BrokenImagesTest"/>
         </classes>
     </test>
+    <test name="CheckBoxesTest">
+        <classes>
+            <class name="features.checkBoxTest.CheckBoxTest"/>
+        </classes>
+    </test>
 
 
 </suite>
