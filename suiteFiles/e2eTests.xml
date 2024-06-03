@@ -20,5 +20,11 @@
             <class name="features.basicAuth.BasicAuthTestOldMethod"/>
         </classes>
     </test>
+    <test name="AddRemoveElementsTest">
+        <classes>
+            <class name="features.brokenImages.BrokenImagesTest"/>
+        </classes>
+    </test>
+
 
 </suite>
