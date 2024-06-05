@@ -40,6 +40,11 @@
             <class name="features.digestAuthentication.DigestAuthenticationOldMethodTest"/>
         </classes>
     </test>
+    <test name="DragAndDropTest">
+        <classes>
+            <class name="features.dragAndDrop.DragAndDropTest"/>
+        </classes>
+    </test>
 
 
 </suite>
