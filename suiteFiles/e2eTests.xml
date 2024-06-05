@@ -30,6 +30,16 @@
             <class name="features.checkBoxTest.CheckBoxTest"/>
         </classes>
     </test>
+    <test name="CheckBoxesTest">
+        <classes>
+            <class name="features.digestAuthentication.DigestAuthenticationTest"/>
+        </classes>
+    </test>
+    <test name="CheckBoxesTest">
+        <classes>
+            <class name="features.digestAuthentication.DigestAuthenticationOldMethodTest"/>
+        </classes>
+    </test>
 
 
 </suite>
